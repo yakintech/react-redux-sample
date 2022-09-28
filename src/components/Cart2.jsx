@@ -4,7 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 function Cart2() {
 
     //mapStateToProps
-    const cart = useSelector(cart => cart);
+    //global states...
+    const cart = useSelector(state => state.cartReducer);
+    const counter = useSelector(state => state.counterReducer);
+
+
+
 
     //mapDispatchToProps
     const dispatch = useDispatch()
@@ -17,6 +22,7 @@ function Cart2() {
     }
     return (
         <>
+        <h1>Counter: {counter}</h1>
             <button onClick={() => empty()}>Empty</button>
             <ul>
                 {

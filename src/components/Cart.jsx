@@ -2,19 +2,17 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { emptyCartAction } from '../redux/actions/cart.actions'
 
-function Cart(props) {
+function Cart({cart, empty}) {
 
     return (
         <>
-        <button onClick={() => props.empty()}>Empty</button>
+        <button onClick={() => empty()}>Empty</button>
          <ul>
             {
-                props.cart && props.cart.map((item,key) => <li key={key}>{item.name}</li>)
+                cart.cartReducer && cart.cartReducer.map((item,key) => <li key={key}>{item.name}</li>)
             }
         </ul>
         </>
-       
-
     )
 }
 
