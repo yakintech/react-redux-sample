@@ -12,7 +12,6 @@ import reducer from './redux/reducers'
 import Products2 from './components/Products2'
 import { todoReducer } from './redux/reducers/todo.reducer'
 import TodoList from './components/TodoList'
-import { basemanager } from './network/api'
 import { getAllTodos } from './redux/actions/todo.action'
 
 
