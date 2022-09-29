@@ -1,5 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { emptyCartAction } from '../redux/actions/cart.actions';
+
 
 function Cart2() {
 
@@ -14,11 +16,9 @@ function Cart2() {
     //mapDispatchToProps
     const dispatch = useDispatch()
 
-   
-
 
     const empty = () => {
-        dispatch({ type: 'EMPTY_CART', payload: '' })
+        dispatch(emptyCartAction())
     }
     return (
         <>
